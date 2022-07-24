@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width:500px;
+            height: 300px;
+            font-size: 20px;
+            color:#000;
+            background-color:#f66;
+        }
+        .box::first-line {
+            font-size:30px;
+            color: blanchedalmond;
+        }
+        .box::first-letter {
+            font-size:30px;
+            color: #f00;
+        }
+        .index::before {
+            content: "注意事项";
+            color: #f00;
+        }
+        .index::after {
+            /*content: url(https://bkssl.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/lemmaStatistics/img/contribute-flag-3_23e3d39.png);*/
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #f66;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>我在济南挺好的</h1>
+        <p class="box">济南、、、，泉城、、、，趵突泉、、、，黑虎泉、、、，千佛山、、、、、芙蓉街、、、、泉城广场</p>
+    </div>
+    <p class="index">济南很美</p>
+</body>
+</html>

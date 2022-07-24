@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+    <body>
+      <script>
+        new Promise(
+          (resolve,reject) => {
+            setTimeout(() => {
+              //在这里调用函数
+              //成功的时候调用resolve
+              resolve('HelloWorld')
+          },1000)
+        }).then(data => {
+          //这里负责执行函数
+          //这里是成功的回调函数用then
+          console.log(data)
+          console.log(data)
+          console.log(data)
+          console.log(data)
+          console.log(data)      
+          return new Promise(
+            (resolve,reject) => {
+              setTimeout(() => {
+                //出错的时候调用reject
+                reject('出错了')
+              },1000)
+            }).catch(data => {
+            //出错的时候reject用catch。
+            //resolve和reject同时用时也可以省略catch，then传入两个函数参数，第一个为成功的，第二个为出错的
+            console.log(data)
+            console.log(data)
+            console.log(data)
+            console.log(data)
+            })
+          })
+      </script>
+  </body>
+</html>
